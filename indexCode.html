@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saigon GRILL - Hotpot & more</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <a href="#" class="logo-link">
+                <img src="Sai-Gon-Logo2-removebg.png" alt="Saigon GRILL Logo" class="logo-img">
+                <span class="logo-text">Saigon GRILL</span>
+            </a>
+            <div class="language-switcher-dropdown">
+                <button class="lang-btn current-lang" id="current-lang-btn">
+                    <img src="https://flagcdn.com/de.svg" alt="Deutsch" height="20">
+                    <span class="lang-arrow">&#9662;</span>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown" style="display:none;">
+                    <button class="lang-btn" data-lang="de" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch" height="20"> Deutsch</button>
+                    <button class="lang-btn" data-lang="en" title="English"><img src="https://flagcdn.com/gb.svg" alt="English" height="20"> English</button>
+                    <button class="lang-btn" data-lang="vi" title="Tiếng Việt"><img src="https://flagcdn.com/vn.svg" alt="Tiếng Việt" height="20"> Tiếng Việt</button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#" data-i18n="nav_home">Startseite</a></li>
+                <li><a href="#buffet" data-i18n="nav_buffet">Buffet Angebot</a></li>
+                <li><a href="#mittagsmenue" data-i18n="nav_menu">Speisekarte</a></li>
+                <li><a href="#impressum" data-i18n="nav_impressum">Impressum</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>SAIGON GRILL</h1>
+            <h2 data-i18n="hero_subtitle">Hotpot & more</h2>
+            <p data-i18n="hero_description">Erleben Sie ein unvergessliches All-You-Can-Eat Erlebnis mit frischen Zutaten und authentischen Geschmäckern.</p>
+            <a href="#speisekarte" class="btn" data-i18n="hero_button">Speisekarte entdecken</a>
+        </div>
+    </section>
+    <!-- Buffet Angebot Section -->
+    <section class="buffet" id="buffet">
+        <div class="buffet-block">
+            <h2 class="buffet-title" data-i18n="buffet_title">Unser Buffet Angebot</h2>
+            <div class="buffet-content">
+                <div class="buffet-abschnitt">
+                    <strong data-i18n="buffet_time_title">Zeitraum und Preis:</strong><br>
+                    <span data-i18n="buffet_time_desc">Warmes Mittagsbuffet: 16,00 €</span><br>
+                    <span data-i18n="buffet_time_hours">Mo. - Fr. von 12:00 - 15:30 Uhr (außer an Feiertagen)</span>
+                </div>
+                <div class="buffet-abschnitt">
+                    <strong data-i18n="buffet_offer_title">Angebot:</strong><br>
+                    <span data-i18n="buffet_offer_desc">Hier steht Ihnen unser Salatbuffet, das warme Buffet und das Nachtisch-Buffet zur Auswahl.</span>
+                </div>
+                <div class="buffet-abschnitt">
+                    <strong data-i18n="buffet_note_title">Hinweis:</strong><br>
+                    <span data-i18n="buffet_note_desc">Bedienen Sie sich – so oft Sie mögen!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Buffet à la Saigon Section -->
+    <section class="buffet-saigon" id="buffet-saigon">
+        <div class="buffet-saigon-block">
+            <h2 class="buffet-saigon-title" data-i18n="buffet_saigon_title">Buffet à la Saigon</h2>
+            <div class="buffet-saigon-content">
+                <div class="buffet-saigon-abschnitt">
+                    <strong data-i18n="buffet_saigon_price">35€</strong><br>
+                    <span data-i18n="buffet_saigon_desc">Mehrgängiges Buffet - Bedienen Sie sich so oft wie es geht</span>
+                </div>
+                <div class="buffet-saigon-abschnitt">
+                    <strong data-i18n="buffet_saigon_includes_title">Inklusive:</strong><br>
+                    <span data-i18n="buffet_saigon_includes_desc">Hotpot und Grill Maschine</span>
+                </div>
+                <div class="buffet-saigon-abschnitt">
+                    <strong data-i18n="buffet_saigon_prices_title">Preise:</strong><br>
+                    <span data-i18n="buffet_saigon_prices_desc">Erwachsene: <span class="preis">35 €</span><br>Kinder bis 13 Jahre: <span class="preis">17,50 €</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Speisekarte Section -->
+    <h2 class="mittagsmenue-title"><span class="big-title" data-i18n="menu_title">Unsere Speisekarte</span></h2>
+    <p class="subtitle" data-i18n="menu_subtitle">Entdecken Sie unsere Vielfalt an frischen Zutaten und köstlichen Gerichten.</p>
+    <!-- Mittags-Menü Section -->
+    <section class="mittagsmenue" id="mittagsmenue">
+        <h2 class="mittagsmenue-title" data-i18n="lunch_menu_title">Mittags-Menü</h2>
+        <div class="mittagsmenue-list">
+            <div class="mittagsmenue-item"><strong>M1</strong> <span data-i18n="m1_desc">Gebratener Eierreis mit Hühnerfleisch und Gemüse</span> <span class="mittagsmenue-preis">11,50€</span></div>
+            <div class="mittagsmenue-item"><strong>M2</strong> <span data-i18n="m2_desc">Gebratene Eiernudeln mit Hühnerfleisch und Gemüse</span> <span class="mittagsmenue-preis">11,50€</span></div>
+            <div class="mittagsmenue-item"><strong>M3</strong> <span data-i18n="m3_desc">Gebratene Reisnudeln mit Hühnerfleisch und Gemüse</span> <span class="mittagsmenue-preis">11,50€</span></div>
+            <div class="mittagsmenue-item"><strong>M4</strong> <span data-i18n="m4_desc">Gebackenes Hähnchen kross mit Gemüse und Süß-Sauer-Sauce</span> <span class="mittagsmenue-preis">12,50€</span></div>
+            <div class="mittagsmenue-item"><strong>M5</strong> <span data-i18n="m5_desc">Gebackene Ente kross mit Gemüse und Süß-Sauer-Sauce</span> <span class="mittagsmenue-preis">13,50€</span></div>
+            <div class="mittagsmenue-item"><strong>M6</strong> <span data-i18n="m6_desc">Rindfleisch mit Zwiebeln</span> <span class="mittagsmenue-preis special-preis">11,50€</span></div>
+            <div class="mittagsmenue-item"><strong>M7</strong> <span data-i18n="m7_desc">Knuspriges Szechuan-Tofu (pikant)</span> <span class="mittagsmenue-preis">11,50€</span></div>
+        </div>
+    </section>
+    <!-- Warme Vorspeisen & Salate Section -->
+    <section class="mittagsmenue" id="vorspeisen">
+        <h2 class="mittagsmenue-title" data-i18n="vorspeisen_title">Warme Vorspeisen & Salate</h2>
+        <div class="mittagsmenue-list">
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>10. <span data-i18n="vorspeise_10_title">Vegetarische Minifrühlingsrolle</span></strong><br>
+                    <span data-i18n="vorspeise_10_desc">6 Stück mit Süß-sauer-Soße</span>
+                </div>
+                <span class="mittagsmenue-preis">5,50€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>11. <span data-i18n="vorspeise_11_title">Gebackene Wan-Tan</span></strong><br>
+                    <span data-i18n="vorspeise_11_desc">6 Stück mit Fleisch gefüllte, knusprige Teigtaschen mit Süß-sauer-Soße</span>
+                </div>
+                <span class="mittagsmenue-preis">5,50€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div style="text-align:left; width:100%">
+                    <strong>12. <span data-i18n="vorspeise_12_title">Gebackene Großgarnelen</span></strong><br>
+                    <span data-i18n="vorspeise_12_desc">5 Stück mit Süß-sauer-Soße</span>
+                </div>
+                <span class="mittagsmenue-preis">8,90€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>13. <span data-i18n="vorspeise_13_title">Lemon chicken Wings</span></strong><br>
+                    <span data-i18n="vorspeise_13_desc">6 Stück mariniert und gebratene Hähnchenflügel mit Limettenblätter und Süß-sauer-Soße</span>
+                </div>
+                <span class="mittagsmenue-preis">6,50€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>14. <span data-i18n="vorspeise_14_title">Sommerrollen</span></strong><br>
+                    <span data-i18n="vorspeise_14_desc">2 Stück mit Salat, Reisnudeln und Hoisin-Erdnuss-Soße</span>
+                    <div class="vorspeisen-optionen">
+                        <div class="option-item">
+                            <span class="option-label">a)</span>
+                            <span class="option-text" data-i18n="vorspeise_14a">Tofu</span>
+                            <span class="option-preis">4,20€</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-label">b)</span>
+                            <span class="option-text" data-i18n="vorspeise_14b">Hühnerfleisch / chicken</span>
+                            <span class="option-preis">4,80€</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-label">c)</span>
+                            <span class="option-text" data-i18n="vorspeise_14c">Garnelen / prawns</span>
+                            <span class="option-preis">5,50€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>15. <span data-i18n="vorspeise_15_title">Hausgemachte Frühlingsrollen</span></strong><br>
+                    <span data-i18n="vorspeise_15_desc">6 Stück mit Garnelen, Hackfleisch und Gemüsefüllung</span>
+                </div>
+                <span class="mittagsmenue-preis">6,90€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>16. <span data-i18n="vorspeise_16_title">Hühnersalat</span></strong><br>
+                    <span data-i18n="vorspeise_16_desc">mit gehacktem Hühnerfleisch, Zwiebeln und verschiedene Kräuter</span>
+                </div>
+                <span class="mittagsmenue-preis">9,50€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>17. <span data-i18n="vorspeise_17_title">Mango Salat</span></strong><br>
+                    <span data-i18n="vorspeise_17_desc">mit Mangostreifen, Zwiebeln, Thaikräutern und Fisch-Dressing-Sauce</span>
+                </div>
+                <span class="mittagsmenue-preis">6,50€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>18. <span data-i18n="vorspeise_18_title">Enten Salat</span></strong><br>
+                    <span data-i18n="vorspeise_18_desc">mit gehacktem Entenfleisch und Thaikräutern</span>
+                </div>
+                <span class="mittagsmenue-preis">12,50€</span>
+            </div>
+            <div class="mittagsmenue-item">
+                <div>
+                    <strong>19. <span data-i18n="vorspeise_19_title">Glasnudel Salat</span></strong><br>
+                    <span data-i18n="vorspeise_19_desc">mit Glasnudeln, Thai Kräutern und Dressing</span>
+                    <div class="vorspeisen-optionen">
+                        <div class="option-item">
+                            <span class="option-label">a)</span>
+                            <span class="option-text" data-i18n="vorspeise_19a">Tofu</span>
+                            <span class="option-preis">8,00€</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-label">b)</span>
+                            <span class="option-text" data-i18n="vorspeise_19b">Hühnerfleisch / chicken</span>
+                            <span class="option-preis">9,50€</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-label">c)</span>
+                            <span class="option-text" data-i18n="vorspeise_19c">Garnelen / prawns</span>
+                            <span class="option-preis">12,50€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mittagsmenue-item">
+                <div style="text-align:left; width:100%">
+                    <strong>20. <span data-i18n="vorspeise_20_title">Gemischter Salat</span></strong><br>
+                    <span data-i18n="vorspeise_20_desc">mit Sesamdressing</span>
+                </div>
+                <span class="mittagsmenue-preis">5,50€</span>
+            </div>
+        </div>
+    </section>
+    <!-- Speisekarte Section -->
+    <section class="speisekarte" id="speisekarte">
+        <div class="gerichte-slider">
+            <div class="gericht-block">
+                <div class="gericht-title">30. <span data-i18n="gericht_30_title">Phở</span> <span class="gericht-preis">12,90€</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_30_desc">Traditionelle vietnamesische Reisbandnudel-Suppe mit Rindfleisch und frischen Kräutern</div>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">31. <span data-i18n="gericht_31_title">Bún Bò Huế</span> <span class="gericht-preis">13,90€</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_31_desc">Aromatisch-scharfe mit Zitronengras gewürzte Rindfleisch-Reisnudelsuppe, Eisbein, vietnamesischer Fleischwurst und frischen Kräutern.</div>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">32. <span data-i18n="gericht_32_title">Hu tiu nam vang</span> <span class="gericht-preis">13,90€</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_32_desc">Saigonesische Hühner mit Reisnudeln, Garnelen, Tintenfisch, gehacktem Schweinefleisch und frischen Kräutern</div>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">33. <span data-i18n="gericht_33_title">Hu tiu nam vang kho</span> <span class="gericht-preis">13,90€</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_33_desc">Saigonesische Reisnudeln mit hausgemachter Sojasoße, Garnelen, Schweinefleisch und Wachteleiern zum Mischen, serviert mit extra Suppe</div>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">34. <span data-i18n="gericht_34_title">Bun Bo Nam Bo</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_34_desc">Reisfadennudeln, Rindfleisch, Zwiebeln, Zitronengras, Salat, Erdnüssen, Fischsoße</div>
+                <div class="gericht-optionen-blocks">
+                    <div class="option-item">
+                        <span class="option-label">a)</span>
+                        <span class="option-text">Tofu</span>
+                        <span class="option-preis">11,50€</span>
+                    </div>
+                    <div class="option-item">
+                        <span class="option-label">b)</span>
+                        <span class="option-text">Hühnerfleisch</span>
+                        <span class="option-preis">12,50€</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">35. <span data-i18n="gericht_35_title">Bún chả giò</span> <span class="gericht-preis">12,90€</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_35_desc">Reisfadennudeln, Salat, Erdnüssen, Limetten, Dressing, Zwiebeln, Frühlingsrollen, Fischsoße.</div>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">36. <span data-i18n="gericht_36_title">Rotes Curry</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_36_desc">mit Kokosmilch, Gemüse</div>
+                <ul class="gericht-optionen">
+                    <li><span class="gericht-option-label">a)</span> <span data-i18n="gericht_36_tofu">Tofu</span> <span class="gericht-preis">12,50€</span></li>
+                    <li><span class="gericht-option-label">b)</span> <span data-i18n="gericht_36_chicken">Hühnerfleisch</span> <span class="gericht-preis">14,50€</span></li>
+                    <li><span class="gericht-option-label">c)</span> <span data-i18n="gericht_36_shrimp">Garnelen</span> <span class="gericht-preis">16,50€</span></li>
+                    <li><span class="gericht-option-label">d)</span> <span data-i18n="gericht_36_duck">Ente kross</span> <span class="gericht-preis">15,50€</span></li>
+                    <li><span class="gericht-option-label">e)</span> <span data-i18n="gericht_36_chicken_crispy">Hühnerfleisch kross</span> <span class="gericht-preis">13,50€</span></li>
+                </ul>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">37. <span data-i18n="gericht_37_title">Rau xào</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_37_desc">Gebratene Saisongemüse mit Thaikräuter, Knoblauch, scharf</div>
+                <ul class="gericht-optionen">
+                    <li><span class="gericht-option-label">a)</span> <span data-i18n="gericht_37_tofu">Tofu</span> <span class="gericht-preis">12,50€</span></li>
+                    <li><span class="gericht-option-label">b)</span> <span data-i18n="gericht_37_chicken">Hühnerfleisch</span> <span class="gericht-preis">13,50€</span></li>
+                    <li><span class="gericht-option-label">c)</span> <span data-i18n="gericht_37_shrimp">Garnelen</span> <span class="gericht-preis">16,90€</span></li>
+                    <li><span class="gericht-option-label">d)</span> <span data-i18n="gericht_37_beef">Rindfleisch</span> <span class="gericht-preis">14,50€</span></li>
+                    <li><span class="gericht-option-label">e)</span> <span data-i18n="gericht_37_duck">Ente kross</span> <span class="gericht-preis">15,50€</span></li>
+                </ul>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">38. <span data-i18n="gericht_38_title">Spezialgericht Süß-sauer-Sauce</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_38_desc">mit Ananas, Tomaten, Gemüse</div>
+                <ul class="gericht-optionen">
+                    <li><span class="gericht-option-label">a)</span> <span data-i18n="gericht_38_tofu">Tofu</span> <span class="gericht-preis">12,50€</span></li>
+                    <li><span class="gericht-option-label">b)</span> <span data-i18n="gericht_38_chicken_crispy">Hühnerfleisch kross</span> <span class="gericht-preis">13,50€</span></li>
+                    <li><span class="gericht-option-label">c)</span> <span data-i18n="gericht_38_shrimp_crispy">Garnelen kross</span> <span class="gericht-preis">16,90€</span></li>
+                    <li><span class="gericht-option-label">d)</span> <span data-i18n="gericht_38_duck">Ente kross</span> <span class="gericht-preis">15,50€</span></li>
+                </ul>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">39. <span data-i18n="gericht_39_title">Phad Khing</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_39_desc">mit gebratenen Saisongemüse, Ingwer, Knoblauch</div>
+                <ul class="gericht-optionen">
+                    <li><span class="gericht-option-label">a)</span> <span data-i18n="gericht_39_tofu">Tofu</span> <span class="gericht-preis">12,50€</span></li>
+                    <li><span class="gericht-option-label">b)</span> <span data-i18n="gericht_39_chicken">Hühnerfleisch</span> <span class="gericht-preis">13,50€</span></li>
+                    <li><span class="gericht-option-label">c)</span> <span data-i18n="gericht_39_shrimp">Garnelen</span> <span class="gericht-preis">16,90€</span></li>
+                    <li><span class="gericht-option-label">d)</span> <span data-i18n="gericht_39_beef">Rindfleisch</span> <span class="gericht-preis">14,50€</span></li>
+                    <li><span class="gericht-option-label">e)</span> <span data-i18n="gericht_39_duck">Ente kross</span> <span class="gericht-preis">15,50€</span></li>
+                </ul>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">40. <span data-i18n="gericht_40_title">Gebratener Eierreis</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_40_desc">mit Gemüse</div>
+                <ul class="gericht-optionen">
+                    <li><span class="gericht-option-label">a)</span> <span data-i18n="gericht_40_tofu">Tofu</span> <span class="gericht-preis">11,00€</span></li>
+                    <li><span class="gericht-option-label">b)</span> <span data-i18n="gericht_40_chicken">Hühnerfleisch</span> <span class="gericht-preis">12,50€</span></li>
+                    <li><span class="gericht-option-label">c)</span> <span data-i18n="gericht_40_shrimp">Garnelen</span> <span class="gericht-preis">16,90€</span></li>
+                    <li><span class="gericht-option-label">d)</span> <span data-i18n="gericht_40_duck">Ente kross</span> <span class="gericht-preis">15,50€</span></li>
+                    <li><span class="gericht-option-label">e)</span> <span data-i18n="gericht_40_chicken_crispy">Hühnerfleisch kross</span> <span class="gericht-preis">13,50€</span></li>
+                </ul>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">41. <span data-i18n="gericht_41_title">Gebratene Eiernudeln</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_41_desc">mit Gemüse</div>
+                <ul class="gericht-optionen">
+                    <li><span class="gericht-option-label">a)</span> <span data-i18n="gericht_41_tofu">Tofu</span> <span class="gericht-preis">11,50€</span></li>
+                    <li><span class="gericht-option-label">b)</span> <span data-i18n="gericht_41_chicken">Hühnerfleisch</span> <span class="gericht-preis">12,50€</span></li>
+                    <li><span class="gericht-option-label">c)</span> <span data-i18n="gericht_41_shrimp">Garnelen</span> <span class="gericht-preis">16,90€</span></li>
+                    <li><span class="gericht-option-label">d)</span> <span data-i18n="gericht_41_duck">Ente kross</span> <span class="gericht-preis">15,50€</span></li>
+                    <li><span class="gericht-option-label">e)</span> <span data-i18n="gericht_41_chicken_crispy">Hühnerfleisch kross</span> <span class="gericht-preis">13,50€</span></li>
+                </ul>
+            </div>
+            <div class="gericht-block">
+                <div class="gericht-title">42. <span data-i18n="gericht_42_title">Pho Xao</span></div>
+                <div class="gericht-beschreibung" data-i18n="gericht_42_desc">Gebratene Reisbandnudeln mit Gemüse</div>
+                <ul class="gericht-optionen">
+                    <li><span class="gericht-option-label">a)</span> <span data-i18n="gericht_42_tofu">Tofu</span> <span class="gericht-preis">11,50€</span></li>
+                    <li><span class="gericht-option-label">b)</span> <span data-i18n="gericht_42_chicken">Hühnerfleisch</span> <span class="gericht-preis">12,50€</span></li>
+                    <li><span class="gericht-option-label">c)</span> <span data-i18n="gericht_42_shrimp">Garnelen</span> <span class="gericht-preis">16,90€</span></li>
+                    <li><span class="gericht-option-label">d)</span> <span data-i18n="gericht_42_duck">Ente kross</span> <span class="gericht-preis">15,50€</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Dessert Section -->
+    <section class="suppen-dessert-wrapper">
+        <section class="suppen">
+            <h2 class="suppen-title" data-i18n="suppen_title">Suppen</h2>
+            <div class="suppen-list">
+                <div class="suppen-card">
+                    <div class="suppen-header">
+                        <span class="suppen-name">Miso Suppe</span>
+                        <span class="suppen-preis">4,50 €</span>
+                    </div>
+                    <div class="suppen-beschreibung" data-i18n="suppe_1_desc">Japanische Sojabohnenpaste, Tofu, Algen, Frühlingszwiebeln</div>
+                </div>
+                <div class="suppen-card">
+                    <div class="suppen-header">
+                        <span class="suppen-name" data-i18n="suppe_2_title">Sauer-Scharf Suppe</span>
+                        <span class="suppen-preis">5,00 €</span>
+                    </div>
+                    <div class="suppen-beschreibung" data-i18n="suppe_2_desc">Mit Huhn, Pilzen, Bambus, Chili, Ei</div>
+                </div>
+                <div class="suppen-card">
+                    <div class="suppen-header">
+                        <span class="suppen-name" data-i18n="suppe_3_title">Tom Kha Gai</span>
+                        <span class="suppen-preis">5,90 €</span>
+                    </div>
+                    <div class="suppen-beschreibung" data-i18n="suppe_3_desc">Thailändische Kokosmilchsuppe mit Huhn, Champignons, Zitronengras</div>
+                </div>
+                <div class="suppen-card">
+                    <div class="suppen-header">
+                        <span class="suppen-name" data-i18n="suppe_4_title">Wantan Suppe</span>
+                        <span class="suppen-preis">5,50 €</span>
+                    </div>
+                    <div class="suppen-beschreibung" data-i18n="suppe_4_desc">Mit gefüllten Teigtaschen, Gemüse, Frühlingszwiebeln</div>
+                </div>
+            </div>
+        </section>
+        <section class="dessert">
+            <h2 data-i18n="dessert_title">Nachtisch / Dessert</h2>
+            <div class="dessert-list">
+                <div class="dessert-block">
+                    <div class="dessert-info">
+                        <div class="dessert-title"><span data-i18n="dessert_1_title">Gebackene Bananen</span></div>
+                        <ul class="dessert-optionen">
+                            <li><span class="dessert-option-label">a)</span> <span data-i18n="dessert_1_honey">mit Honig</span> <span class="dessert-preis">4,00€</span></li>
+                            <li><span class="dessert-option-label">b)</span> <span data-i18n="dessert_1_honey_ice">mit Honig & Vanilleeis</span> <span class="dessert-preis">5,00€</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dessert-block">
+                    <div class="dessert-info">
+                        <div class="dessert-title"><span data-i18n="dessert_2_title">Gemischtes Eis</span> <span class="dessert-preis">6,50€</span></div>
+                        <div class="dessert-beschreibung" data-i18n="dessert_2_desc">mit Sahne</div>
+                    </div>
+                </div>
+                <div class="dessert-block">
+                    <div class="dessert-info">
+                        <div class="dessert-title"><span data-i18n="dessert_3_title">Che chuoi</span> <span class="dessert-preis">5,00€</span></div>
+                        <div class="dessert-beschreibung" data-i18n="dessert_3_desc">mit Kokosmilch & Erdnüsse</div>
+                    </div>
+                </div>
+                <div class="dessert-block">
+                    <div class="dessert-info">
+                        <div class="dessert-title"><span data-i18n="dessert_5_title">Banh tet chuoi</span> <span class="dessert-preis">6,00€</span></div>
+                        <div class="dessert-beschreibung" data-i18n="dessert_5_desc">Klebreis mit Kokosmilch & Erdnüsse</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Google Maps Section -->
+    <section class="maps-section" id="maps">
+        <h2 class="maps-title" data-i18n="maps_title">Hier finden Sie uns</h2>
+        <div class="maps-container">
+            <iframe class="maps-iframe" src="https://www.google.com/maps?q=Saigon+Grill+%26+Hotpot+Spandauer+Damm+181+-+183,+14050+Berlin&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="maps-fallback" style="display:none; width:100%; text-align:center;">
+                <a id="maps-link" href="#" target="_blank" class="btn" data-i18n="maps_button">Karte öffnen</a>
+            </div>
+        </div>
+    </section>
+    <!-- Öffnungszeiten & Impressum Section -->
+    <section class="info-section">
+        <!-- Öffnungszeiten Block -->
+        <div class="info-block opening-hours-block">
+            <h2 data-i18n="opening_hours_title">Öffnungszeiten</h2>
+            <div class="info-content">
+                <p data-i18n="opening_hours_desc">Montag bis Sonntag<br>12:00 – 22:00 Uhr</p>
+            </div>
+        </div>
+        <!-- Impressum Section -->
+        <div class="info-block impressum-block" id="impressum">
+            <h2 data-i18n="impressum_title">Impressum</h2>
+            <div class="impressum-content">
+                <p><strong>Saigon Grill & Hotpot</strong></p>
+                <p>Spandauer Damm 181, 14050 Berlin</p>
+                <p>Telefon: 0173 931 5634 || 030 2356 0493</p>
+                <p>Inhaber: Nguyen Van Mustermann</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        var isAndroid = /Android/.test(navigator.userAgent);
+        var mapsLink = document.getElementById('maps-link');
+        var fallbackDiv = document.querySelector('.maps-fallback');
+        var iframe = document.querySelector('.maps-iframe');
+        var placeId = 'ChIJ-9CjtJZXqEcRvFrmHvOQfj0';
+        var appleAddress = encodeURIComponent('Spandauer Damm 181, 14050 Berlin, Deutschland');
+
+        if (iframe) {
+            // iframe.src = 'https://www.google.com/maps?q=place_id:' + placeId + '&output=embed'; // entfernt, da src jetzt fest im HTML gesetzt ist
+        }
+
+        if (isIOS || isAndroid) {
+            // iframe ausblenden, Fallback-Link zeigen
+            if (iframe) iframe.style.display = 'none';
+            if (fallbackDiv) fallbackDiv.style.display = 'block';
+
+            if (isIOS) {
+                mapsLink.href = 'https://maps.apple.com/?q=' + appleAddress;
+                mapsLink.setAttribute('data-i18n', 'maps_button_apple');
+            } else if (isAndroid) {
+                mapsLink.href = 'https://www.google.com/maps/search/?api=1&query=place_id:' + placeId;
+                mapsLink.setAttribute('data-i18n', 'maps_button_google');
+            }
+            // Nach Attribut-Änderung Übersetzung erneut anwenden
+            if (typeof setLanguage === 'function') {
+                var lang = document.documentElement.lang || 'de';
+                setLanguage(lang);
+            }
+        }
+    });
+    </script>
+</body>
+</html>

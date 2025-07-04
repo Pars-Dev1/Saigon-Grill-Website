@@ -1,0 +1,1427 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 0;
+    position: static;
+    box-shadow: none;
+    flex-direction: row;
+    transition: none;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 8px 14px;
+    border-radius: 6px;
+    display: block;
+}
+
+.navbar a:hover {
+    color: #E00808;
+    background: #fff7f2;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1200;
+    background: none;
+    border: none;
+    color: #E00808;
+    margin-left: 12px;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+    40% { transform: translateX(-100%); }
+    66% { transform: translateX(-100%); }
+    73% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+/* Logo-Text links in Rot */
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #E00808;
+    letter-spacing: 2px;
+}
+
+/* Hero Section mit Overlay */
+.hero {
+    position: relative;
+    background: url('LP.jpg') center/cover no-repeat fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.btn {
+    background-color: #E00808;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #b10606;
+    transform: scale(1.05);
+}
+
+/* Gerichte-Slider */
+.speisekarte {
+    background: #fff;
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+.speisekarte h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #E00808;
+    margin-bottom: 10px;
+}
+.speisekarte .subtitle {
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.gerichte-slider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+}
+.gericht-block {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(224,8,8,0.10);
+    padding: 28px 22px 20px 22px;
+    margin: 0 0 18px 0;
+    min-width: 260px;
+    max-width: 340px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+}
+.gericht-block:hover {
+    background: #fff7f2;
+    box-shadow: 0 8px 32px rgba(224,8,8,0.18);
+    transform: scale(1.03) translateY(-4px);
+}
+.gericht-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    background: #eee;
+}
+.gericht-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+.gericht-beschreibung {
+    color: #3a2a1a;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+.gericht-preis {
+    color: #fd0808;
+    font-weight: bold;
+    margin-left: 32px;
+}
+.gericht-optionen {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #444;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+.gericht-optionen li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 0;
+    box-shadow: 0 1px 4px rgba(224,8,8,0.04);
+    justify-content: space-between;
+}
+.gericht-option-label {
+    display: inline-block;
+    min-width: 1.5em;
+    color: #191919;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.08em;
+}
+
+/* Scrollbar Styling */
+.gerichte-slider::-webkit-scrollbar {
+    height: 10px;
+}
+.gerichte-slider::-webkit-scrollbar-thumb {
+    background: #E00808;
+    border-radius: 5px;
+}
+
+/* Dessert Sektion */
+.dessert {
+    background: #fff7f2;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(224,8,8,0.08);
+    padding: 38px 28px 28px 28px;
+    min-width: 340px;
+    max-width: 370px;
+    width: 100%;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.dessert h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #e0c308;
+    margin-bottom: 20px;
+}
+.dessert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+.dessert-block {
+    width: 340px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(224,8,8,0.08);
+    padding: 18px 16px 16px 16px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.dessert-block:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(224,8,8,0.16);
+}
+.dessert-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #eee;
+}
+.dessert-info {
+    flex: 1;
+}
+.dessert-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e0d208;
+    margin-bottom: 4px;
+}
+.dessert-preis {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 4px;
+}
+.dessert-beschreibung {
+    font-size: 15px;
+    color: #444;
+}
+.dessert-optionen {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #444;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+.dessert-optionen li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 0;
+    box-shadow: 0 1px 4px rgba(224,8,8,0.04);
+    justify-content: space-between;
+}
+.dessert-option-label {
+    display: inline-block;
+    min-width: 1.5em;
+    color: #E00808;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.08em;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 900px) {
+    .gerichte-slider {
+        gap: 18px;
+    }
+    .gericht-block {
+        min-width: 98vw;
+        max-width: 98vw;
+        padding: 18px 8px 14px 8px;
+    }
+    .dessert-block {
+        min-width: 240px;
+        padding: 16px 8px 12px 8px;
+    }
+}
+@media (max-width: 600px) {
+    .logo-text {
+        font-size: 22px;
+    }
+    .speisekarte h2, .dessert h2 {
+        font-size: 22px;
+    }
+    .gerichte-slider {
+        gap: 8px;
+    }
+    .gericht-block {
+        min-width: 98vw;
+        max-width: 98vw;
+        padding: 10px 4px 8px 4px;
+    }
+    .dessert-list {
+        width: 100%;
+        max-width: 100vw;
+        padding: 0;
+        gap: 12px;
+    }
+    .dessert-block {
+        width: 100%;
+        max-width: 100vw;
+        min-width: unset;
+        box-sizing: border-box;
+        padding: 12px 6px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 220px;
+        height: auto;
+        min-height: unset;
+        max-width: 80vw;
+        padding: 32px 0 0 0;
+        box-shadow: -2px 0 16px rgba(0,0,0,0.18);
+        z-index: 2000;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: right 0.3s;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+        align-items: flex-start;
+        margin-top: 32px;
+        padding-left: 24px;
+    }
+    .navbar a {
+        font-size: 1.15rem;
+        padding: 12px 0;
+        width: 100%;
+        text-align: left;
+        border-radius: 8px;
+        padding-left: 8px;
+    }
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 32px;
+        right: 18px;
+        left: auto;
+        z-index: 2100;
+        transform: translateY(-50%);
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    .hero-content p {
+        font-size: 18px;
+    }
+    .header {
+        flex-wrap: wrap;
+        padding: 12px 8px;
+    }
+    .header-left {
+        gap: 6px;
+    }
+}
+.invisible { opacity: 0; transform: translateY(40px); transition: opacity 0.7s, transform 0.7s; }
+.visible { opacity: 1; transform: translateY(0); }
+
+/* Speisekarten-Animation */
+.speisekarte-animation {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.speisekarte-animation canvas {
+    width: 100%;
+    height: 220px;
+    display: block;
+    pointer-events: none;
+}
+
+/* Öffnungszeiten & Impressum Sektion */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    padding: 60px 20px 40px 20px;
+    background: #011020;
+    flex-wrap: wrap;
+}
+.info-block {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(224,8,8,0.08);
+    padding: 28px 36px;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+.info-block:hover {
+    background: #f0faff;
+    box-shadow: 0 8px 32px rgba(224,8,8,0.18);
+    transform: scale(1.03) translateY(-4px);
+}
+.info-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #E00808;
+    margin-bottom: 18px;
+}
+.info-content p, .impressum-content p {
+    font-size: 17px;
+    color: #191919;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Responsive Design für info-section */
+@media (max-width: 900px) {
+    .info-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .info-block {
+        min-width: 280px;
+        max-width: 600px;
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .info-section {
+        padding: 40px 10px 20px 10px;
+    }
+    .info-block {
+        padding: 20px 24px;
+        min-width: 250px;
+    }
+    .info-block h2 {
+        font-size: 24px;
+    }
+    .info-content p, .impressum-content p {
+        font-size: 15px;
+    }
+}
+
+/* Logo-Link (Logo + Text gemeinsam klickbar) */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.logo-link:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 16px rgba(224,8,8,0.12);
+}
+.logo-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+@media (max-width: 600px) {
+    .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+    .logo-text {
+        font-size: 16px;
+    }
+}
+
+/* Buffet Angebot Sektion */
+.buffet {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 48px 0 32px 0;
+}
+.buffet-block {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(224,8,8,0.08);
+    padding: 36px 32px 32px 32px;
+    max-width: 480px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    margin: 0 16px;
+}
+.buffet-block:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(224,8,8,0.16);
+}
+.buffet-title {
+    color: #E00808;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.buffet-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.buffet-abschnitt {
+    font-size: 1.08rem;
+    color: #333;
+    line-height: 1.6;
+}
+.buffet-abschnitt strong + br + span,
+.buffet-abschnitt strong + br + span.buffet-englisch {
+    color: #FA001A;
+    font-weight: 600;
+}
+/* Alternativ: gezielt für den letzten .buffet-abschnitt */
+.buffet-abschnitt:last-child {
+    color: #FA001A;
+    font-weight: 600;
+}
+.buffet-englisch {
+    color: #888;
+    font-size: 0.98em;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Buffet à la Saigon Sektion */
+.buffet-saigon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff7f2;
+    padding: 32px 0 48px 0;
+}
+.buffet-saigon-block {
+    background: linear-gradient(135deg, #fff 0%, #fff7f2 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(224,8,8,0.12);
+    padding: 36px 32px 32px 32px;
+    max-width: 480px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    margin: 0 16px;
+    border: 2px solid rgba(224,8,8,0.1);
+}
+.buffet-saigon-block:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(224,8,8,0.2);
+    border-color: rgba(224,8,8,0.2);
+}
+.buffet-saigon-title {
+    color: #E00808;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(224,8,8,0.1);
+}
+.buffet-saigon-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.buffet-saigon-abschnitt {
+    font-size: 1.08rem;
+    color: #333;
+    line-height: 1.6;
+}
+.buffet-saigon-abschnitt strong {
+    color: #E00808;
+    font-size: 1.2em;
+}
+@media (max-width: 700px) {
+    .buffet-block, .buffet-saigon-block {
+        padding: 22px 8vw 18px 8vw;
+        max-width: 98vw;
+    }
+    .buffet-title, .buffet-saigon-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Spezielles Styling für die Vorspeisen-Sektion im Mittagsmenü-Layout */
+#vorspeisen .mittagsmenue-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    word-break: break-word;
+}
+@media (min-width: 700px) {
+    #vorspeisen .mittagsmenue-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+        align-items: stretch;
+    }
+    #vorspeisen .mittagsmenue-item {
+        flex: 1 1 260px;
+        min-width: 220px;
+        max-width: 300px;
+        margin-bottom: 0;
+    }
+    #vorspeisen.mittagsmenue {
+        max-width: 1000px;
+    }
+}
+
+#vorspeisen .mittagsmenue-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(224,8,8,0.06);
+    padding: 16px 12px;
+    font-size: 1.08rem;
+    color: #3a2a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s, opacity 0.7s, transform 0.7s;
+    text-align: left;
+    white-space: normal;
+}
+#vorspeisen .mittagsmenue-item .en {
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: #444;
+    display: block;
+    margin-top: 2px;
+}
+#vorspeisen .mittagsmenue-preis {
+    color: #E00808;
+    font-weight: bold;
+    margin-left: 12px;
+    white-space: nowrap;
+}
+#vorspeisen ul.vorspeisen-optionen {
+    margin: 6px 0 0 0;
+    padding-left: 18px;
+    font-size: 0.98em;
+    color: #444;
+}
+#vorspeisen ul.vorspeisen-optionen li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+    white-space: normal;
+}
+
+.special-preis {
+    color: #DD0016 !important;
+}
+
+.big-title {
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    display: inline-block;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-left: 18px;
+}
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    outline: none;
+}
+.lang-btn.active, .lang-btn:hover {
+    box-shadow: 0 0 0 2px #E00808;
+    transform: scale(1.08);
+}
+.lang-btn img {
+    display: block;
+    border-radius: 2px;
+}
+
+/* Verbesserte Hero Section Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    .hero-content p {
+        font-size: 18px;
+        max-width: 90%;
+    }
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content h2 {
+        font-size: 20px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* Verbesserte Buffet Blöcke Responsive */
+@media (max-width: 700px) {
+    .buffet, .buffet-saigon {
+        padding: 30px 10px 20px 10px;
+    }
+    .buffet-block, .buffet-saigon-block {
+        padding: 20px 16px 16px 16px;
+        margin: 0 8px;
+    }
+    .buffet-title, .buffet-saigon-title {
+        font-size: 1.4rem;
+    }
+    .buffet-abschnitt, .buffet-saigon-abschnitt {
+        font-size: 1rem;
+    }
+}
+
+/* Verbesserte Speisekarte Responsive */
+@media (max-width: 900px) {
+    .gerichte-slider {
+        gap: 16px;
+        padding: 15px 10px;
+    }
+    .gericht-block {
+        min-width: 280px;
+        max-width: 98vw;
+    }
+    .speisekarte h2 {
+        font-size: 28px;
+        padding: 0 20px;
+    }
+    .speisekarte .subtitle {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 600px) {
+    .gerichte-slider {
+        gap: 12px;
+        padding: 10px 5px;
+    }
+    .gericht-block {
+        min-width: 95vw;
+        max-width: 95vw;
+        padding: 12px 8px;
+    }
+    .gericht-title {
+        font-size: 20px;
+    }
+    .gericht-beschreibung {
+        font-size: 14px;
+    }
+    .speisekarte h2 {
+        font-size: 24px;
+    }
+    .speisekarte .subtitle {
+        font-size: 16px;
+    }
+}
+
+/* Verbesserte Mittagsmenü Responsive */
+@media (max-width: 700px) {
+    .mittagsmenue {
+        padding: 20px 10px 15px 10px;
+        margin: 20px auto;
+    }
+    .mittagsmenue-title {
+        font-size: 1.4rem;
+    }
+    .mittagsmenue-item {
+        padding: 12px 8px;
+        font-size: 1rem;
+    }
+    .mittagsmenue-preis {
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 600px) {
+    .mittagsmenue {
+        padding: 15px 5px 10px 5px;
+    }
+    .mittagsmenue-title {
+        font-size: 1.2rem;
+    }
+    .mittagsmenue-item {
+        padding: 10px 6px;
+        font-size: 0.95rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .mittagsmenue-preis {
+        align-self: flex-end;
+        margin-left: 0;
+    }
+}
+
+/* Verbesserte Suppen & Dessert Responsive */
+@media (max-width: 900px) {
+    .suppen-dessert-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .suppen, .dessert {
+        min-width: 280px;
+        max-width: 600px;
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .suppen-dessert-wrapper {
+        padding: 0 10px;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .suppen, .dessert {
+        padding: 20px 15px 15px 15px;
+        min-width: 95vw;
+        max-width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .suppen-title, .dessert h2 {
+        font-size: 1.4rem;
+    }
+    .suppen-card, .dessert-block {
+        padding: 12px 10px;
+    }
+}
+
+/* Verbesserte Maps Responsive */
+@media (max-width: 900px) {
+    .maps-section {
+        padding: 40px 20px 30px 20px;
+    }
+    .maps-iframe {
+        max-width: 98vw;
+        height: 350px;
+    }
+}
+@media (max-width: 600px) {
+    .maps-section {
+        padding: 30px 10px 20px 10px;
+    }
+    .maps-iframe {
+        height: 250px;
+    }
+    .maps-title {
+        font-size: 24px;
+    }
+}
+
+/* Suppen & Dessert Wrapper */
+.suppen-dessert-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Suppen Sektion */
+.suppen {
+    background: #fff7f2;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(224,8,8,0.08);
+    padding: 38px 28px 28px 28px;
+    min-width: 340px;
+    max-width: 370px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.suppen-title {
+    color: #E00808;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.suppen-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.suppen-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(224,8,8,0.06);
+    padding: 18px 16px 14px 16px;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    cursor: pointer;
+    border-left: 5px solid #E00808;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.suppen-card:hover {
+    background: #FFF0F5;
+    box-shadow: 0 8px 32px rgba(224,8,8,0.13);
+    transform: scale(1.025);
+}
+.suppen-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.suppen-name {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #E00808;
+    font-family: 'Playfair Display', serif;
+}
+.suppen-preis {
+    font-size: 1.08rem;
+    color: #2919E3;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.suppen-beschreibung {
+    color: #3a2a1a;
+    font-size: 1.01rem;
+    margin-top: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Mittags-Menü Sektion */
+.mittagsmenue {
+    background: #fff7f2;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(224,8,8,0.08);
+    padding: 38px 28px 28px 28px;
+    min-width: 340px;
+    max-width: 370px;
+    width: 100%;
+    margin: 32px auto 32px auto;
+    text-align: center;
+}
+.mittagsmenue-title, .subtitle {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mittagsmenue-title {
+    color: #E00808;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mittagsmenue-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+}
+@media (min-width: 700px) {
+    .mittagsmenue {
+        max-width: 1000px;
+    }
+    .mittagsmenue-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .mittagsmenue-item {
+        flex: 1 1 260px;
+        min-width: 220px;
+        max-width: 300px;
+        margin-bottom: 0;
+    }
+}
+.mittagsmenue-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(224,8,8,0.06);
+    padding: 16px 12px;
+    font-size: 1.08rem;
+    color: #3a2a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s, opacity 0.7s, transform 0.7s;
+    text-align: left;
+}
+.mittagsmenue-item:hover {
+    background: #fff7f2;
+    box-shadow: 0 8px 32px rgba(224,8,8,0.13);
+    transform: scale(1.04) translateY(-4px);
+}
+.mittagsmenue-item.invisible { opacity: 0; transform: translateY(40px); }
+.mittagsmenue-item.visible { opacity: 1; transform: translateY(0); }
+.mittagsmenue-preis {
+    color: #E00808;
+    font-weight: bold;
+    margin-left: 12px;
+}
+.mittagsmenue-item strong {
+    margin-right: 16px;
+}
+
+/* Warme Vorspeisen & Salate Sektion */
+.vorspeisen {
+    background: #fff7f2;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(224,8,8,0.08);
+    padding: 38px 28px 28px 28px;
+    min-width: 340px;
+    max-width: 370px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.vorspeisen-title {
+    color: #E00808;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.vorspeisen-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.vorspeisen-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(224,8,8,0.06);
+    padding: 18px 16px 14px 16px;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    cursor: pointer;
+    border-left: 5px solid #E00808;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.vorspeisen-card:hover {
+    background: #FFF0F5;
+    box-shadow: 0 8px 32px rgba(224,8,8,0.13);
+    transform: scale(1.025);
+}
+.vorspeisen-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.vorspeisen-name {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #E00808;
+    font-family: 'Playfair Display', serif;
+}
+.vorspeisen-preis {
+    font-size: 1.08rem;
+    color: #2919E3;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.vorspeisen-beschreibung {
+    color: #3a2a1a;
+    font-size: 1.01rem;
+    margin-top: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Google Maps Section */
+.maps-section {
+    background: #fff;
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+.maps-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #E00808;
+    margin-bottom: 24px;
+}
+.maps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.maps-iframe {
+    width: 95vw;
+    max-width: 900px;
+    height: 500px;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+/* Preis Klasse für Buffet */
+.preis {
+    color: #E00808;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Verbesserte Vorspeisen-Optionen Formatierung */
+.vorspeisen-optionen {
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.98em;
+    color: #444;
+}
+.option-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 4px 0;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 8px;
+}
+.option-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.option-label {
+    font-weight: bold;
+    color: #E00808;
+    min-width: 20px;
+    text-align: left;
+}
+.option-text {
+    flex: 1;
+    color: #333;
+    font-size: 0.95em;
+}
+.option-preis {
+    color: #E00808;
+    font-weight: bold;
+    font-size: 0.9em;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.gericht-title span:first-child {
+    color: #191919;
+    font-weight: bold;
+}
+
+.language-switcher-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+}
+.lang-btn.current-lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 2px 4px;
+    border-radius: 2px;
+    transition: box-shadow 0.2s, background 0.2s;
+    box-shadow: none;
+}
+.lang-btn.current-lang:focus, .lang-btn.current-lang:hover {
+    background: #fff7f2;
+    box-shadow: 0 1px 3px rgba(224,8,8,0.08);
+}
+.lang-arrow {
+    font-size: 1.1em;
+    margin-left: 2px;
+}
+.lang-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    border-radius: 8px;
+    min-width: 140px;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0;
+    animation: fadeIn 0.18s;
+}
+.lang-dropdown .lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.18s;
+    width: 100%;
+    text-align: left;
+}
+.lang-dropdown .lang-btn:hover {
+    background: #fff0f5;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px) {
+    .language-switcher-dropdown {
+        margin-left: 8px;
+    }
+    .lang-dropdown {
+        min-width: 110px;
+        left: 0;
+        right: auto;
+    }
+}
+
+.lang-btn.current-lang[data-lang='vi'],
+.lang-btn.current-lang img[src*='vn.svg'] {
+    padding: 1px 3px;
+    border-radius: 1px;
+    outline: 1px solid #e0e0e0;
+}
+
+.subtitle {
+    text-align: center;
+}
