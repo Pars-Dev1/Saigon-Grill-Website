@@ -104,7 +104,7 @@ const translations = {
         // Buffet Section
         buffet_title: 'Unser Buffet Angebot',
         buffet_time_title: 'Zeitraum und Preis:',
-        buffet_time_desc: 'Warmes Mittagsbuffet: 16,00 €',
+        buffet_time_desc: 'Warmes Mittagsbuffet: 14,90 €',
         buffet_time_hours: 'Mo. - Fr. von 12:00 - 15:30 Uhr (außer an Feiertagen)',
         buffet_offer_title: 'Angebot:',
         buffet_offer_desc: 'Hier steht Ihnen unser Salatbuffet, das warme Buffet und das Nachtisch-Buffet zur Auswahl.',
@@ -113,12 +113,12 @@ const translations = {
         
         // Buffet à la Saigon Section
         buffet_saigon_title: 'Buffet à la Saigon',
-        buffet_saigon_price: '35€',
+        buffet_saigon_price: '24,90€',
         buffet_saigon_desc: 'Mehrgängiges Buffet - Bedienen Sie sich so oft wie es geht',
         buffet_saigon_includes_title: 'Inklusive:',
         buffet_saigon_includes_desc: 'Hotpot und Grill Maschine',
         buffet_saigon_prices_title: 'Preise:',
-        buffet_saigon_prices_desc: 'Erwachsene: <span class="preis">35 €</span><br>Kinder bis 13 Jahre: <span class="preis">17,50 €</span>',
+        buffet_saigon_prices_desc: 'Erwachsene: <span class="preis">24,90 €</span><br>Kinder bis 13 Jahre: <span class="preis">17,00 €</span>',
         
         // Öffnungszeiten
         opening_hours_title: 'Öffnungszeiten',
@@ -280,7 +280,7 @@ const translations = {
         // Buffet Section
         buffet_title: 'Our Buffet Offer',
         buffet_time_title: 'Time and Price:',
-        buffet_time_desc: 'Warm lunch buffet: 16.00 €',
+        buffet_time_desc: 'Warm lunch buffet: 14.90 €',
         buffet_time_hours: 'Mon - Fri from 12:00 - 3:30 pm (holidays not included)',
         buffet_offer_title: 'Offer:',
         buffet_offer_desc: 'We provide a salad buffet, the warm buffet and the dessert buffet.',
@@ -294,7 +294,7 @@ const translations = {
         buffet_saigon_includes_title: 'Including:',
         buffet_saigon_includes_desc: 'Hotpot and grill machine',
         buffet_saigon_prices_title: 'Prices:',
-        buffet_saigon_prices_desc: 'Adults: <span class="preis">35 €</span><br>Children up to 13 years: <span class="preis">17.50 €</span>',
+        buffet_saigon_prices_desc: 'Adults: <span class="preis">24.90 €</span><br>Children up to 13 years: <span class="preis">17.00 €</span>',
         
         // Öffnungszeiten
         opening_hours_title: 'Opening Hours',
@@ -456,7 +456,7 @@ const translations = {
         // Buffet Section
         buffet_title: 'Món Buffet Của Chúng Tôi',
         buffet_time_title: 'Thời gian và giá:',
-        buffet_time_desc: 'Buffet trưa nóng: 16,00 €',
+        buffet_time_desc: 'Buffet trưa nóng: 14,90 €',
         buffet_time_hours: 'Thứ 2 - Thứ 6 từ 12:00 - 15:30 (trừ ngày lễ)',
         buffet_offer_title: 'Món ăn:',
         buffet_offer_desc: 'Chúng tôi cung cấp buffet salad, buffet nóng và buffet tráng miệng.',
@@ -465,12 +465,12 @@ const translations = {
         
         // Buffet à la Saigon Section
         buffet_saigon_title: 'Buffet à la Saigon',
-        buffet_saigon_price: '35€',
+        buffet_saigon_price: '24.90€',
         buffet_saigon_desc: 'Buffet nhiều món - Hãy tự phục vụ bao nhiêu lần tùy thích',
         buffet_saigon_includes_title: 'Bao gồm:',
         buffet_saigon_includes_desc: 'Lẩu và máy nướng',
         buffet_saigon_prices_title: 'Giá:',
-        buffet_saigon_prices_desc: 'Người lớn: <span class="preis">35 €</span><br>Trẻ em dưới 13 tuổi: <span class="preis">17,50 €</span>',
+        buffet_saigon_prices_desc: 'Người lớn: <span class="preis">24.90 €</span><br>Trẻ em dưới 13 tuổi: <span class="preis">17.00 €</span>',
         
         // Öffnungszeiten
         opening_hours_title: 'Giờ mở cửa',
