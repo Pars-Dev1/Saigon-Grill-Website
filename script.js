@@ -289,7 +289,7 @@ const translations = {
         
         // Buffet à la Saigon Section
         buffet_saigon_title: 'Buffet à la Saigon',
-        buffet_saigon_price: '35€',
+        buffet_saigon_price: '24,90€',
         buffet_saigon_desc: 'Multi-course buffet - Help yourself as often as you like',
         buffet_saigon_includes_title: 'Including:',
         buffet_saigon_includes_desc: 'Hotpot and grill machine',
