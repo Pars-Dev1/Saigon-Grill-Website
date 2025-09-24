@@ -114,7 +114,7 @@ const translations = {
         // Buffet à la Saigon Section
         buffet_saigon_title: 'Buffet à la Saigon',
         buffet_saigon_price: '24,90€',
-        buffet_saigon_desc: 'Mehrgängiges Buffet - Bedienen Sie sich so oft wie es geht',
+        buffet_saigon_desc: 'Mehrgängiges Buffet von 12:00 Uhr bis 22:00 Uhr - Bedienen Sie sich so oft wie es geht',
         buffet_saigon_includes_title: 'Inklusive:',
         buffet_saigon_includes_desc: 'Hotpot und Grill Maschine',
         buffet_saigon_prices_title: 'Preise:',
@@ -290,7 +290,7 @@ const translations = {
         // Buffet à la Saigon Section
         buffet_saigon_title: 'Buffet à la Saigon',
         buffet_saigon_price: '24,90€',
-        buffet_saigon_desc: 'Multi-course buffet - Help yourself as often as you like',
+        buffet_saigon_desc: 'Multi-course buffet from 12:00 - 10:00 pm - Help yourself as often as you like',
         buffet_saigon_includes_title: 'Including:',
         buffet_saigon_includes_desc: 'Hotpot and grill machine',
         buffet_saigon_prices_title: 'Prices:',
@@ -466,7 +466,7 @@ const translations = {
         // Buffet à la Saigon Section
         buffet_saigon_title: 'Buffet à la Saigon',
         buffet_saigon_price: '24.90€',
-        buffet_saigon_desc: 'Buffet nhiều món - Hãy tự phục vụ bao nhiêu lần tùy thích',
+        buffet_saigon_desc: 'Buffet nhiều món 12:00 - 22:00 - Hãy tự phục vụ bao nhiêu lần tùy thích',
         buffet_saigon_includes_title: 'Bao gồm:',
         buffet_saigon_includes_desc: 'Lẩu và máy nướng',
         buffet_saigon_prices_title: 'Giá:',
