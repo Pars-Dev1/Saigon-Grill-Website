@@ -114,7 +114,7 @@ const translations = {
         // Buffet à la Saigon Section
         buffet_saigon_title: 'Buffet à la Saigon',
         buffet_saigon_price: '24,90€',
-        buffet_saigon_desc: 'Mehrgängiges Buffet von 12:00 Uhr bis 22:00 Uhr - Bedienen Sie sich so oft wie es geht',
+        buffet_saigon_desc: 'Mehrgängiges Buffet von 12:00 - 22:00 Uhr - Bedienen Sie sich so oft wie es geht',
         buffet_saigon_includes_title: 'Inklusive:',
         buffet_saigon_includes_desc: 'Hotpot und Grill Maschine',
         buffet_saigon_prices_title: 'Preise:',
